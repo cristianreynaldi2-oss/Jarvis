@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { SendHorizontal } from "lucide-react";
 
-function ChatInput() {
+function ChatInput({ onSend }) {
   const [message, setMessage] = useState("");
 
   const handleSend = () => {
@@ -9,7 +9,7 @@ function ChatInput() {
 
     if (!text) return;
 
-    console.log(text);
+    onSend(text);
 
     setMessage("");
   };
@@ -26,8 +26,8 @@ function ChatInput() {
       <div className="flex items-end gap-3 rounded-2xl border border-slate-700 bg-slate-900 px-4 py-3">
         <textarea
           rows={1}
-          placeholder="Message Jarvis..."
           value={message}
+          placeholder="Message Jarvis..."
           onChange={(e) => setMessage(e.target.value)}
           onKeyDown={handleKeyDown}
           className="
