@@ -23,3 +23,25 @@ Daftar Matriks Fitur:
 ## Notes
 
 Status pengerjaan dari setiap baris matriks fitur ini akan diperbarui dari _Rencana_ menjadi _Selesai_ pada berkas log rilis utama[cite: 1, 2].
+
+## Completed
+
+- Sidebar
+- Header
+- Welcome Screen
+- Chat Input
+- Conversation
+- Fake AI
+- Typing Indicator
+- Auto Scroll
+
+## Planned
+
+- Backend API
+- Ollama
+- Conversation History
+- New Chat
+- Memory
+- Voice
+- Vision
+- Desktop

@@ -1,5 +1,39 @@
 # Changelog
 
+## Sprint 1
+
+### Added
+
+- Initialize Git
+- React + Vite
+- TailwindCSS
+- Sidebar
+- Header
+- Welcome Screen
+- Chat Area
+- Chat Input
+- Conversation
+- User Message
+- Assistant Message
+- Fake AI
+- Typing Indicator
+- Auto Scroll
+
+### Changed
+
+- Folder Structure
+- Component Structure
+- Chat Layout
+- ChatInput dipindahkan ke ChatArea
+
+### Fixed
+
+- Duplicate ChatInput
+- Layout Scroll
+- isTyping Props
+- Chat Input Position
+- Conversation Auto Scroll
+
 ## Overview
 
 Dokumen pencatatan resmi mengenai penambahan, perubahan, maupun perbaikan bug yang dilakukan di dalam Project Jarvis dari waktu ke waktu[cite: 1].

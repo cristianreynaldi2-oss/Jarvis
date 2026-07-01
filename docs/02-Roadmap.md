@@ -22,3 +22,34 @@ Fase-fase ini dirancang dan dijadwalkan sepenuhnya untuk kebutuhan pengembangan 
 1. **Offline First:** Memprioritaskan pemrosesan di lokal mesin tanpa ketergantungan internet[cite: 7].
 2. **Documentation First:** Setiap langkah arsitektur dan perubahan arah harus tercatat rapi di berkas `.md`[cite: 1].
 3. **Keep It Simple:** Fokus pada fungsionalitas pengguna tunggal tanpa overhead fitur kompleks[cite: 7, 10].
+
+# Development Roadmap
+
+## ✅ Sprint 1
+
+Theme:
+Frontend Foundation
+
+Status:
+Completed
+
+---
+
+## 🎯 Sprint 2
+
+Theme:
+Backend Foundation
+
+Status:
+Next
+
+---
+
+## 🔮 Future Development
+
+- AI Integration
+- Conversation Memory
+- Desktop Application
+- Voice Assistant
+- Vision
+- Desktop Automation
