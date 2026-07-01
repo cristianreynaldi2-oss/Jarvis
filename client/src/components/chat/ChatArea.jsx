@@ -1,4 +1,4 @@
-import WelcomeScreen from "./WelcomeScreen";
+import WelcomeScreen from "../conversation/WelcomeScreen";
 
 function ChatArea() {
   return (

@@ -16,13 +16,14 @@ function ChatInput() {
         />
 
         <button
+          disabled
           className="
-            rounded-xl
-            bg-blue-600
-            p-2
-            transition
-            hover:bg-blue-700
-          "
+                rounded-xl
+                bg-slate-700
+                p-2
+                opacity-50
+                cursor-not-allowed
+            "
         >
           <SendHorizontal size={18} />
         </button>
