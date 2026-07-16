@@ -1,12 +1,13 @@
-/**
- * Controller untuk menangani logika Chat
- */
+import ollama from "ollama";
 
+/**
+ * Controller untuk menangani logika Chat dengan Ollama Lokal
+ */
 export const handleChat = async (req, res) => {
   try {
     const { message } = req.body;
 
-    // Validasi input
+    // Validasi input kosong
     if (!message || message.trim() === "") {
       return res.status(400).json({
         status: "error",
@@ -14,24 +15,31 @@ export const handleChat = async (req, res) => {
       });
     }
 
-    // Simulasi delay Fake AI agar efek mengetik di frontend terasa natural
-    setTimeout(() => {
-      const replyMessage = `Ini adalah respons otomatis (Fake AI) dari backend Jarvis untuk pesanmu: "${message}"`;
+    // Melakukan request ke Ollama yang berjalan secara lokal
+    // Catatan: Pastikan model 'llama3' sudah terunduh di Ollama kamu.
+    // Kamu bisa menggantinya dengan 'mistral', 'gemma', atau model lain yang kamu punya.
+    const response = await ollama.chat({
+      model: "llama3.2:3b",
+      messages: [{ role: "user", content: message }],
+    });
 
-      return res.status(200).json({
-        status: "success",
-        data: {
-          reply: replyMessage,
-          sender: "assistant",
-          timestamp: new Date().toISOString(),
-        },
-      });
-    }, 1500); // Delay 1.5 detik
+    // Mengambil teks jawaban hasil generate dari LLM
+    const aiReply = response.message.content;
+
+    return res.status(200).json({
+      status: "success",
+      data: {
+        reply: aiReply,
+        sender: "assistant",
+        timestamp: new Date().toISOString(),
+      },
+    });
   } catch (error) {
-    console.error("Error in handleChat:", error);
+    console.error("Error in handleChat with Ollama:", error);
     return res.status(500).json({
       status: "error",
-      message: "Internal server error.",
+      message:
+        "Failed to communicate with local AI Engine. Make sure Ollama is running.",
     });
   }
 };

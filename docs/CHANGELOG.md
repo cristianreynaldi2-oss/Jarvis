@@ -34,25 +34,21 @@
 - Chat Input Position
 - Conversation Auto Scroll
 
-## Overview
+## [Sprint 2] - 2026-07-16
 
-Dokumen pencatatan resmi mengenai penambahan, perubahan, maupun perbaikan bug yang dilakukan di dalam Project Jarvis dari waktu ke waktu[cite: 1].
+### Added
 
-## Goals
+- Menginisialisasi project backend terpisah menggunakan Node.js dan Express.js.
+- Menambahkan middleware `cors` dan `express.json` pada entry point server.
+- Membuat endpoint pemeriksaan kesehatan server (`GET /api/health`).
+- Membuat struktur backend modular dengan folder `routes/` dan `controllers/`.
+- Membuat endpoint chat utama (`POST /api/chat`) di sisi backend.
+- Menginstal library resmi SDK `@ollama/ollama` pada environment backend.
 
-Menjaga transparansi histori pengembangan sistem agar pengembang tahu apa saja yang sudah diimplementasikan di versi terdahulu[cite: 1].
+### Changed
 
-## Specifications
+- Mengubah fungsi `handleSendMessage` di `ChatArea.jsx` frontend menjadi `async/await` fetch request mengarah ke port backend 5000.
 
-### [0.1.0] - Rencana Inisiasi Awal
+### Removed
 
-#### Added
-
-- Penyusunan dokumen visi misi dan filosofi dasar Project Jarvis[cite: 1].
-- Pemetaan dan standarisasi spesifikasi struktur berkas dokumentasi (`docs/`)[cite: 1].
-- Perancangan spesifikasi antarmuka pengguna dasar (Chat UI, Sidebar, Markdown Renderer, Code Highlight)[cite: 1].
-- Penentuan target arsitektur teknis terpadu (React, Tailwind, Node.js, Express, SQLite, Prisma, Ollama, Electron)[cite: 1].
-
-## Notes
-
-Format pencatatan log ini mengikuti standar penulisan log perubahan global berbasis Markdown yang bersih dan mudah dipahami[cite: 1].
+- Menghapus fungsi simulasi `getFakeReply` lokal yang berada di komponen React Frontend.

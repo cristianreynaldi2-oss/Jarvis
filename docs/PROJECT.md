@@ -18,19 +18,13 @@ Target utama:
 
 # Current Status
 
-Current Sprint
-
-✅ Sprint 1 Completed
-
-Current Phase
-
-Frontend Foundation
+Current Sprint: 🏆 Sprint 2 Completed (Foundation Phase)
+Current Phase: Backend API Foundation
 
 Project Status
-
 Frontend UI ██████████ 100%
-Backend API ░░░░░░░░░░ 0%
-AI Integration ░░░░░░░░░░ 0%
+Backend API ██████████ 100% (Foundation Ready)
+AI Integration ░░░░░░░░░░ 10% (SDK Prepared, Setup Ollama Engine)
 Database ░░░░░░░░░░ 0%
 Desktop ░░░░░░░░░░ 0%
 
@@ -38,225 +32,43 @@ Desktop ░░░░░░░░░░ 0%
 
 # Tech Stack
 
-Frontend
-
-- React
-- Vite
-- TailwindCSS
-
-Backend
-
-- Express.js (Planned)
-
-Database
-
-- SQLite (Planned)
-
-AI
-
-- Ollama (Planned)
-
-Desktop
-
-- Electron (Planned)
+Frontend: React, Vite, TailwindCSS
+Backend: Express.js, Node.js
+AI: Ollama (In Progress)
+Database: SQLite (Planned)
+Desktop: Electron (Planned)
 
 ---
 
 # Current Architecture
 
-Frontend (React)
-
-↓
-
-Chat Components
-
-↓
-
-Fake AI
-
-↓
-
-Next
-
-↓
-
-Express API
-
-↓
-
-Ollama
-
-↓
-
-LLM
+Frontend (React) ↔ HTTP POST ↔ Express API ↔ Ollama SDK (Local)
 
 ---
 
 # Folder Structure
 
-Current Frontend
-
-src/
-
-- assets/
-- components/
-  - chat/
-  - common/
-  - conversation/
-  - layout/
-  - sidebar/
-- constants/
-- pages/
-- styles/
-
----
-
-# Sprint History
-
-## Sprint 1
-
-### Theme
-
-Frontend Foundation
-
-### Objective
-
-Membangun pondasi frontend Jarvis sebelum backend dan AI.
-
-### Completed
-
-- Initialize Git
-- React + Vite
-- TailwindCSS
-- Folder Structure
-- Sidebar
-- Header
-- Welcome Screen
-- Chat Area
-- Chat Input
-- Conversation
-- User Bubble
-- Assistant Bubble
-- Fake AI
-- Typing Indicator
-- Auto Scroll
-
-### Bugs Fixed
-
-- Duplicate ChatInput
-- Layout Scroll
-- isTyping Props
-- Chat Input keluar dari viewport
-- Auto Scroll Conversation
-
-### Lessons Learned
-
-- React Component
-- Props
-- State
-- useState
-- useEffect
-- useRef
-- Conditional Rendering
-- Component Architecture
-- Tailwind Layout
-- Flexbox
-- Git Conventional Commit
-- Debugging Workflow
+Jarvis/
+├── client/ # Frontend Web Application (React + Vite)
+└── server/ # Backend API Service (Express.js)
+├── src/
+│ ├── controllers/
+│ ├── routes/
+│ └── app.js
+└── package.json
 
 ---
 
 # Important Decisions
 
-### D-001
+... (Keputusan D-001 sampai D-007 tetap dipertahankan) ...
 
-Frontend menggunakan React + Vite.
+### D-008
 
-Status:
-Accepted
+Pemisahan arsitektur menjadi Decoupled Client-Server (Multi-package Monorepo) untuk memisahkan runtime environment browser dan server Node.js.
+Status: Accepted
 
----
+### D-009
 
-### D-002
-
-Styling menggunakan TailwindCSS.
-
-Status:
-Accepted
-
----
-
-### D-003
-
-Backend menggunakan Express.
-
-Status:
-Accepted
-
----
-
-### D-004
-
-AI menggunakan Ollama.
-
-Status:
-Accepted
-
----
-
-### D-005
-
-Database menggunakan SQLite.
-
-Status:
-Accepted
-
----
-
-### D-006
-
-Selesaikan UI terlebih dahulu menggunakan Fake AI sebelum backend.
-
-Status:
-Accepted
-
----
-
-### D-007
-
-ChatInput menjadi bagian dari ChatArea, bukan Home.
-
-Status:
-Accepted
-
----
-
-# Development Rules
-
-- Gunakan Conventional Commit
-- Dokumentasi diperbarui setiap Sprint selesai
-- Debug sebelum menambah fitur
-- Fokus menyelesaikan satu milestone sebelum lanjut
-
----
-
-# Next Sprint
-
-## Sprint 2
-
-Theme
-
-Backend Foundation
-
-Objective
-
-Membangun backend pertama Jarvis.
-
-Target
-
-- Setup Express
-- Struktur Backend
-- REST API
-- React ↔ Express
-- Menghapus Fake AI
-- Menghubungkan AI melalui API
+Pemindahan simulasi AI Engine dari Frontend lokal ke Backend Controller sebelum migrasi penuh ke LLM Lokal.
+Status: Accepted
