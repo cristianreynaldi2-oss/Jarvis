@@ -1,4 +1,5 @@
 import ollama from "ollama";
+import systemPrompt from "../config/systemPrompt.js";
 
 /**
  * Controller untuk menangani logika Chat dengan Ollama Lokal
@@ -16,11 +17,18 @@ export const handleChat = async (req, res) => {
     }
 
     // Melakukan request ke Ollama yang berjalan secara lokal
-    // Catatan: Pastikan model 'llama3' sudah terunduh di Ollama kamu.
-    // Kamu bisa menggantinya dengan 'mistral', 'gemma', atau model lain yang kamu punya.
     const response = await ollama.chat({
       model: "llama3.2:3b",
-      messages: [{ role: "user", content: message }],
+      messages: [
+        {
+          role: "system",
+          content: systemPrompt,
+        },
+        {
+          role: "user",
+          content: message,
+        },
+      ],
     });
 
     // Mengambil teks jawaban hasil generate dari LLM
