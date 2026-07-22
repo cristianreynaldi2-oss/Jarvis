@@ -92,13 +92,13 @@ Namun identitas AI tetap Nat.
 # Current Architecture
 
 Frontend (React)
-        ↕
+↕
 HTTP Request
-        ↕
+↕
 Express API
-        ↕
+↕
 Ollama
-        ↕
+↕
 Local LLM
 
 ---
@@ -106,22 +106,27 @@ Local LLM
 # Tech Stack
 
 Frontend:
+
 - React
 - Vite
 - TailwindCSS
 
 Backend:
+
 - Node.js
 - Express.js
 
 AI:
+
 - Ollama
 - `llama3.2:3b`
 
 Database:
+
 - SQLite (Planned)
 
 Desktop:
+
 - Electron (Planned)
 
 ---
@@ -130,15 +135,15 @@ Desktop:
 
 Jarvis/
 ├── client/
-│   └── # Frontend Web Application (React + Vite)
+│ └── # Frontend Web Application (React + Vite)
 │
 └── server/
-    ├── src/
-    │   ├── config/
-    │   ├── controllers/
-    │   ├── routes/
-    │   └── app.js
-    └── package.json
+├── src/
+│ ├── config/
+│ ├── controllers/
+│ ├── routes/
+│ └── app.js
+└── package.json
 
 ---
 
@@ -262,6 +267,14 @@ Proyek berada dalam kondisi:
 **Development Paused**
 
 Pause dilakukan karena keterbatasan perangkat lokal, bukan karena kegagalan arsitektur atau integrasi utama.
+
+### Local Environment
+
+Environment Ollama dan model AI lokal telah dihapus dari perangkat pengembangan sebagai bagian dari proses pembersihan environment.
+
+Source code dan konfigurasi dependency Ollama tetap dipertahankan di repository sebagai bagian dari checkpoint terakhir proyek.
+
+Untuk melanjutkan pengembangan, environment Ollama dan dependency yang diperlukan perlu di-install kembali.
 
 Checkpoint terakhir proyek mencakup:
 
